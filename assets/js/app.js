@@ -7,4 +7,10 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.scss';
+import "bootstrap";
+import $ from "jquery";
 
+import * as utils from "./utils";
+$(() => {
+    $("[data-method]").on("click", utils.ajaxLinkHandler);
+});
